@@ -10,7 +10,7 @@ The "short" impulses are a logigal 0, the "long" impulses are a logical 1. So a 
 
 111100111000111000110011010110001001100010101101000101010000110011111011
 
-##Protocall explenation
+## protocall explenation
 
 | area | explenation | calculation | unit |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ The "short" impulses are a logigal 0, the "long" impulses are a logical 1. So a 
 
 I build a simple decoder in excel, provided [here](https://github.com/pascaltippelt/Wamsler-IR-Remote/raw/main/IR-Decoder.xlsx).
 
-##future steps
+## future steps
 
 My plan is to build an esp* based IR "remote" to control the stove remotely via internet. Progress will be published here.
