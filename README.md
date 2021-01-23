@@ -39,3 +39,9 @@ The "short" impulses are a logigal 0, the "long" impulses are a logical 1. So a 
 | bit 66 | timer 2 ON active | 1 = true, 0 = false | |
 | bit 67 | timer 1 OFF active | 1 = true, 0 = false | |
 | bit 68 to 71 | propably parity or so| | (to be determined) |
+
+I build a simple decoder in excel, provided [here](https://github.com/pascaltippelt/Wamsler-IR-Remote/raw/main/IR-Decoder.xlsx).
+
+##future steps
+
+My plan is to build an esp* based IR "remote" to control the stove remotely via internet. Progress will be published here.
