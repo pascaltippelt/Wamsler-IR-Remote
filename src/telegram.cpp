@@ -341,13 +341,54 @@ bool telegram::setTime(int hour, int minute)
     }
 };
 
+int nibbleToDec(bool nib[4] = { 0 })
+{
+    int dez = 0;
+    if (nib[3]) { dez += 1; }
+    if (nib[2]) { dez += 2; }
+    if (nib[1]) { dez += 4; }
+    if (nib[0]) { dez += 8; }
+    return dez;
+}
+
 bool telegram::calcPruefsumme()
 {
-    int pr = 0;
-    for (int i = 0; i < 17; i++) {  //add first 17 nibbles without overflow
-        
+    int nibbles[17] = { 0 };
+    for (int i = 0; i < 17; i++) {
+        //4 bit in 1 nibble
+        bool t_nib[4] = {data[4*i+0], data[4 * i + 1], data[4 * i + 2], data[4 * i + 3] };
+        //convert nibble to decimal and write it to nibbles
+        nibbles[i] = nibbleToDec(t_nib);
     }
 
+    int p_sum = 0;
+
+    for (int i = 0; i < 17; i++) {
+        int t_p_sum = p_sum + nibbles[i];
+        if (t_p_sum < 16) {
+            p_sum = t_p_sum;
+        }
+        else {
+            p_sum = t_p_sum - 16;
+        }
+    }
+
+    int arr[4] = { 0 };
+
+    int dec = p_sum;
+    int i = 0;
+
+    while (dec > 0) {
+        arr[i] = dec % 2;
+        i++;
+        dec = dec / 2;
+    }
+
+    data[68] = !arr[3];
+    data[69] = !arr[2];
+    data[70] = !arr[1];
+    data[71] = !arr[0];
+   
     return true;
 }
 
@@ -360,7 +401,7 @@ bool telegram::calcTelegram()
     data[4] = Turbo;
     //data 5...7 by setBlowerLevel()
     data[8] = Econo;
-    data[9] = 1;            //unknown
+    data[9] = 0;            //unknown
     //data 10...15 by setTemperature()
     //data 16...47 by setTimerXon or setTimerXoff
     //data 48...63 by setTime()
