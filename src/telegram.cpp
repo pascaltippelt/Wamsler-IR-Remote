@@ -85,11 +85,11 @@ bool telegram::setTimer1on(int hour, int minute)
             dec = dec / 2;
         }
 
-        data[19] = arr[4];
-        data[20] = arr[3];
-        data[21] = arr[2];
-        data[22] = arr[1];
-        data[23] = arr[0];        
+        data[16] = arr[4];
+        data[17] = arr[3];
+        data[18] = arr[2];
+        data[19] = arr[1];
+        data[20] = arr[0];        
     }
     else {
         return false;
@@ -108,9 +108,9 @@ bool telegram::setTimer1on(int hour, int minute)
             dec = dec / 2;
         }
 
-        data[16] = arr[2];
-        data[17] = arr[1];
-        data[18] = arr[0];
+        data[21] = arr[2];
+        data[22] = arr[1];
+        data[23] = arr[0];
 
         return true;
     }
@@ -141,11 +141,11 @@ bool telegram::setTimer1off(int hour, int minute)
             dec = dec / 2;
         }
 
-        data[27] = arr[4];
-        data[28] = arr[3];
-        data[29] = arr[2];
-        data[30] = arr[1];
-        data[31] = arr[0];
+        data[24] = arr[4];
+        data[25] = arr[3];
+        data[26] = arr[2];
+        data[27] = arr[1];
+        data[28] = arr[0];
     }
     else {
         return false;
@@ -164,9 +164,9 @@ bool telegram::setTimer1off(int hour, int minute)
             dec = dec / 2;
         }
 
-        data[24] = arr[2];
-        data[25] = arr[1];
-        data[26] = arr[0];
+        data[29] = arr[2];
+        data[30] = arr[1];
+        data[31] = arr[0];
 
         return true;
     }
@@ -196,11 +196,11 @@ bool telegram::setTimer2on(int hour, int minute)
             dec = dec / 2;
         }
 
-        data[35] = arr[4];
-        data[36] = arr[3];
-        data[37] = arr[2];
-        data[38] = arr[1];
-        data[39] = arr[0];
+        data[32] = arr[4];
+        data[33] = arr[3];
+        data[34] = arr[2];
+        data[35] = arr[1];
+        data[36] = arr[0];
     } else {
         return false;
     }
@@ -218,9 +218,9 @@ bool telegram::setTimer2on(int hour, int minute)
             dec = dec / 2;
         }
 
-        data[32] = arr[2];
-        data[33] = arr[1];
-        data[34] = arr[0];
+        data[37] = arr[2];
+        data[38] = arr[1];
+        data[39] = arr[0];
         return true;
     } else {
         return false;
@@ -248,11 +248,11 @@ bool telegram::setTimer2off(int hour, int minute)
             dec = dec / 2;
         }
 
-        data[43] = arr[4];
-        data[44] = arr[3];
-        data[45] = arr[2];
-        data[46] = arr[1];
-        data[47] = arr[0];
+        data[40] = arr[4];
+        data[41] = arr[3];
+        data[42] = arr[2];
+        data[43] = arr[1];
+        data[44] = arr[0];
     } else {
         return false;
     }
@@ -270,9 +270,9 @@ bool telegram::setTimer2off(int hour, int minute)
             dec = dec / 2;
         }
 
-        data[40] = arr[2];
-        data[41] = arr[1];
-        data[42] = arr[0];
+        data[45] = arr[2];
+        data[46] = arr[1];
+        data[47] = arr[0];
         
         return true;
     } else {
