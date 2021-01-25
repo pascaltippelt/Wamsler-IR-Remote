@@ -38,7 +38,7 @@ The "short" impulses are a logigal 0, the "long" impulses are a logical 1. So a 
 | bit 65 | timer 1 OFF active | 1 = true, 0 = false | |
 | bit 66 | timer 2 ON active | 1 = true, 0 = false | |
 | bit 67 | timer 1 OFF active | 1 = true, 0 = false | |
-| bit 68 to 71 | custom checksum | | (to be determined) |
+| bit 68 to 71 | custom checksum | see below | |
 
 I build a simple decoder in excel, provided [here](https://github.com/pascaltippelt/Wamsler-IR-Remote/raw/main/IR-Decoder.xlsx).
 
