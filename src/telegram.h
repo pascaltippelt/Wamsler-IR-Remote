@@ -24,10 +24,6 @@ public:
 	bool setTimer2off(int hour = 0, int minute = 0);
 	bool setTime(int hour = 0, int minute = 0);
 
-	void importTelegram(std::string tel_str);
-
-	//Funktionen, Get
-
 	//Funktionen, Output
 	std::string toString();
 	
