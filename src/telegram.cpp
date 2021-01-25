@@ -341,6 +341,11 @@ bool telegram::setTime(int hour, int minute)
     }
 };
 
+/// <summary>
+/// Converts a nibble to a decimal number.
+/// </summary>
+/// <param name="nib">nibble as array</param>
+/// <returns>decimal number as integer</returns>
 int nibbleToDec(bool nib[4] = { 0 })
 {
     int dez = 0;
@@ -351,6 +356,10 @@ int nibbleToDec(bool nib[4] = { 0 })
     return dez;
 }
 
+/// <summary>
+/// Calculates the checksum-nibble based on the first 17 nibbles.
+/// </summary>
+/// <returns>true if successfull</returns>
 bool telegram::calcPruefsumme()
 {
     int nibbles[17] = { 0 };
@@ -392,6 +401,10 @@ bool telegram::calcPruefsumme()
     return true;
 }
 
+/// <summary>
+/// Sets all bits inside the telegram.
+/// </summary>
+/// <returns>true if successfull</returns>
 bool telegram::calcTelegram()
 {
     data[0] = 1;            //unknown
@@ -420,6 +433,10 @@ bool telegram::calcTelegram()
     
 }
 
+/// <summary>
+/// Converts the bool-array data into a string
+/// </summary>
+/// <returns>string, containing the telegram (human redable)</returns>
 std::string telegram::toString()
 {
     if (calcTelegram()) 
@@ -436,17 +453,3 @@ std::string telegram::toString()
     }
 
 };
-
-
-
-bool importTelegram(std::string tel_str)
-{
-    return NULL;
-}
-
-//std::string toBinary(int n)
-//{
-//    std::string r;
-//    while(n!=0) {r=(n%2==0 ?"0":"1")+r; n/=2;}
-//    return r;
-//}
