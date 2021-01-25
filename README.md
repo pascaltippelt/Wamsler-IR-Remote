@@ -22,14 +22,14 @@ The "short" impulses are a logigal 0, the "long" impulses are a logical 1. So a 
 | bit 8  | "econo" mode on / off | 1 = on, 0 = off | |
 | bit 9 | currently unknown | | |
 | bit 10 to 15 | temperature | 7 + binToDec | °C |
-| bit 16 to 18 | timer 1 ON minute | binToDec * 10 | minutes|
-| bit 19 to 23 | timer 1 ON hour | binToDec | hours |
-| bit 24 to 26 | timer 1 OFF minute | binToDec * 10 | minutes|
-| bit 27 to 31 | timer 1 OFF hour | binToDec | hours |
-| bit 32 to 34 | timer 2 ON minute | binToDec * 10 | minutes|
-| bit 35 to 39 | timer 2 ON hour | binToDec | hours |
-| bit 40 to 42 | timer 2 OFF minute | binToDec * 10 | minutes|
-| bit 43 to 47 | timer 2 OFF hour | binToDec | hours |
+| bit 16 to 20 | timer 1 ON hour | binToDec | hours |
+| bit 21 to 23 | timer 1 ON minute | binToDec * 10 | minutes|
+| bit 24 to 28 | timer 1 OFF hour | binToDec | hours |
+| bit 29 to 31 | timer 1 OFF minute | binToDec * 10 | minutes|
+| bit 32 to 36 | timer 2 ON hour | binToDec | hours |
+| bit 37 to 39 | timer 2 ON minute | binToDec * 10 | minutes|
+| bit 40 to 44 | timer 2 OFF hour | binToDec | hours |
+| bit 45 to 47 | timer 2 OFF minute | binToDec * 10 | minutes|
 | bit 48 to 49 | currently unknown, maybe part of 50..55 | | |
 | bit 50 to 55 | hour of day | binToDec | hours |
 | bit 56 to 57 | currently unknown, maybe part of 59..64 | | |
