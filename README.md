@@ -42,6 +42,8 @@ The "short" impulses are a logigal 0, the "long" impulses are a logical 1. So a 
 
 I build a simple decoder in excel, provided [here](https://github.com/pascaltippelt/Wamsler-IR-Remote/raw/main/IR-Decoder.xlsx).
 
+There is also a prototype of a encoder available under [src](/src).
+
 ### custom checksum
 
 To calculate the "checksum", add the first 17 nibbles without overflow. See "calcPruefsumme()" in src/telegram.cpp !
