@@ -48,6 +48,39 @@ There is also a prototype of a encoder available under [src](/src).
 
 To calculate the "checksum", add the first 17 nibbles without overflow. See "calcPruefsumme()" in src/telegram.cpp !
 
-## future steps
+## arduino library
 
-My plan is to build an esp* based IR "remote" to control the stove remotely via internet. Progress will be published here.
+There is a simple prototype of an arduino library available, see [arduino_library](/arduino_library). How to use: Creaty a new folder called "telegram" in .../Arduino/libraries/. Copy all contents from [arduino_library](/arduino_library) inside. Then load the example script:
+
+```c++
+#include <telegram.h>
+
+myTelegram t = myTelegram(13);
+
+void setup() {
+  t.AUTOTimer = true;
+  t.setBlowerLevel(3);
+  t.OnOff = true;
+  t.Turbo = false;
+  t.setTemperature(21);
+  t.setTimer1on(6, 30);
+  t.setTimer1off(11, 00);
+  t.setTimer2on(19, 00);
+  t.setTimer2off(21, 50);
+  t.setTime(20, 3);
+  t.timer1onActive = true;
+  t.timer1offActive = true;
+  t.timer2onActive = true;
+  t.timer2offActive = true;
+
+  Serial.begin(9600);
+  Serial.println(t.toString());
+  
+  t.sendTelegram();
+  
+  }
+
+void loop() {
+
+}
+```
