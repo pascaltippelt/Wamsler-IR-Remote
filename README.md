@@ -1,6 +1,6 @@
 # Wamsler-IR-Remote
 
-I have got a Wamsler / Westminster Quattro 6 pellet stove with a IR-Remote. I wanted to reverse-engineer the transmission-code, this is the result with big help from [mikrocontroller.net](https://www.mikrocontroller.net/topic/511335#6560508).
+I have got a Wamsler / Westminster Quattro 6 pellet stove with a IR-Remote. I wanted to reverse-engineer the transmission-code, this is the result with big help from [mikrocontroller.net](https://www.mikrocontroller.net/topic/511335#6560508). The control unit is based on the Duepi Evo line.
 
 This is how a transmission telegram might look:
 
@@ -84,3 +84,5 @@ void loop() {
 
 }
 ```
+## tipp: connect to the stove via serial interface...
+...as it was done by [aceindy](https://github.com/aceindy/Duepi_EVO). This is just a reference for your information.
