@@ -499,3 +499,31 @@ bool myTelegram::sendTelegram() {
 
     return true;
 }
+
+
+bool myTelegram::sendTelegramSoftPWM() {
+
+    //Set PWM Frequency
+    analogWriteFreq(38000);
+    analogWrite(_pin, 512);
+    delayMicroseconds(long_starter);
+    analogWrite(_pin, 0);
+    delayMicroseconds(short_starter);
+
+    for (int i = 0; i < 72; i++) {
+        analogWrite(_pin, 512);
+        delayMicroseconds(t_break);
+        analogWrite(_pin, 0);
+        if (data[i]) {
+            delayMicroseconds(t_true);
+        }
+        else {
+            delayMicroseconds(t_false);
+        }
+    }
+    analogWrite(_pin, 512);
+    delayMicroseconds(t_break);
+    analogWrite(_pin, 0);
+
+    return true;
+}
