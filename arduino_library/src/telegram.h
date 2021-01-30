@@ -32,6 +32,7 @@ public:
 	//Funktionen, Output
 	String toString();
 	bool sendTelegram();
+	bool sendTelegramSoftPWM();
 	
 
 private:
