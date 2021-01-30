@@ -21,7 +21,11 @@ void setup() {
   Serial.begin(9600);
   Serial.println(t.toString());
   
+  //Sends telegram WITHOUT modulation (for use with hardware modulator)
   t.sendTelegram();
+  
+  //Sends teöegram with software pwm modulation at 38kHz
+  t.sendTelegramSoftPWM();
   
   }
 
